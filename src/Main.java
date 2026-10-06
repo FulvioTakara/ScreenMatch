@@ -1,3 +1,4 @@
+import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Filme;
 
 public class Main{
@@ -13,6 +14,7 @@ public class Main{
         meuFilme.avalia(10);
         meuFilme.exibeFichaTecnica();
 
-
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro. filtra(meuFilme);
     }
 }
