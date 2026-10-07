@@ -1,5 +1,6 @@
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
+import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
@@ -23,6 +24,15 @@ public class Main{
         serie1.setTemporadas(7);
         serie1.setEpisodiosPorTemporada(23);
         serie1.setMinutosPorEpisodio(50);
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        Episodio episodio1 = new Episodio();
+        episodio1.setNumero(1);
+        episodio1.setNome("Piloto");
+        episodio1.setSerie(serie1);
+        episodio1.setTotalVisualizacoes(500);
+        filtro.filtra(episodio1);
+
 
     //alimentando objeto com dados
         filme1.avalia(10);
@@ -48,7 +58,6 @@ public class Main{
        System.out.println(calculadora.getTempoTotal());
 
        //Aplicando o filtro de recomendação
-       FiltroRecomendacao filtro = new FiltroRecomendacao();
        filtro.filtra(filme1);
        filtro.filtra(filme2);
     }
